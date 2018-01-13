@@ -1,6 +1,6 @@
 {
   "name": "@konfirm/collection",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Base collections, find intersections and diffs. Allows for explicit allowed type definitions",
   "main": "source/collection.js",
   "scripts": {
