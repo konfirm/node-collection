@@ -1,0 +1,51 @@
+{
+	"extends": [
+		"strict"
+	],
+	"env": {
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 8
+	},
+	"rules": {
+		"no-tabs": 0,
+		"indent": [
+			"error",
+			"tab"
+		],
+		"id-blacklist": [
+			"error",
+			"data",
+			"err",
+			"e",
+			"cb",
+			"callback"
+		],
+		"array-bracket-spacing": [
+			"error",
+			"always",
+			{
+				"arraysInArrays": false
+			}
+		],
+		"brace-style": [
+			"error",
+			"stroustrup"
+		],
+		"id-match": [
+			"error",
+			"^[a-z]*([A-Z][a-z]+)*$",
+			{
+				"onlyDeclarations": true
+			}
+		],
+		"array-element-newline": [
+			"error",
+			{
+				"multiline": true,
+				"minItems": 4
+			}
+		]
+	}
+}
