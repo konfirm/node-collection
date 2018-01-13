@@ -1,5 +1,8 @@
 # Collection
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d05600d9018a4bdcbe2c61fc5647279d)](https://www.codacy.com/app/konfirm/node-collection?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=konfirm/node-collection&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/konfirm/node-collection.svg?branch=master)](https://travis-ci.org/konfirm/node-collection)
+
 Base collections, find intersections and diffs. Allows for explicit allowed type definitions.
 
 ## Getting started
