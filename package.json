@@ -1,14 +1,22 @@
 {
   "name": "@konfirm/collection",
   "version": "0.0.0",
-  "description": "",
+  "description": "Base collections, find intersections and diffs. Allows for explicit allowed type definitions",
   "main": "source/collection.js",
   "scripts": {
     "test": "lab -vclr",
     "test-coverage-html": "lab -clr html -o report.html"
   },
   "keywords": [],
-  "author": "Rogier Spieker  <rogier+collection@konfirm.eu>",
+  "homepage": "https://github.com/konfirm/node-collection",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konfirm/node-collection.git"
+  },
+  "bugs": {
+    "url": "https://github.com/konfirm/node-collection/issues"
+  },
+  "author": "Rogier Spieker  <rogier@konfirm.eu>",
   "license": "MIT",
   "devDependencies": {
     "@konfirm/labrat": "^1.1.0",
