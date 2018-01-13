@@ -6,7 +6,7 @@ const NumberCollection = require('../../extends/number-collection');
 const NumberStringCollection = require('../../extends/number-string-collection');
 
 describe('Collection Diff', () => {
-	const collectionA = Collection.from([
+	const one = Collection.from([
 		'a',
 		'b',
 		1,
@@ -15,15 +15,15 @@ describe('Collection Diff', () => {
 		true,
 		false,
 	]);
-	const collectionB = StringCollection.from([ 'a', 'b', 'c' ]);
-	const collectionC = NumberCollection.from([
+	const two = StringCollection.from([ 'a', 'b', 'c' ]);
+	const three = NumberCollection.from([
 		0,
 		1,
 		2,
 		3,
 		4,
 	]);
-	const collectionD = NumberStringCollection.from([
+	const four = NumberStringCollection.from([
 		'c',
 		4,
 		'b',
@@ -35,36 +35,36 @@ describe('Collection Diff', () => {
 	]);
 
 	[
-		{ a: collectionA, b: collectionB, expect: [
+		{ a: one, b: two, expect: [
 			1,
 			2,
 			3,
 			true,
 			false,
 		] },
-		{ a: collectionB, b: collectionA, expect: [ 'c' ] },
+		{ a: two, b: one, expect: [ 'c' ] },
 
-		{ a: collectionA, b: collectionC, expect: [
+		{ a: one, b: three, expect: [
 			'a',
 			'b',
 			true,
 			false,
 		] },
-		{ a: collectionC, b: collectionA, expect: [ 0, 4 ] },
+		{ a: three, b: one, expect: [ 0, 4 ] },
 
-		{ a: collectionA, b: collectionD, expect: [ true, false ] },
-		{ a: collectionD, b: collectionA, expect: [ 'c', 4 ] },
+		{ a: one, b: four, expect: [ true, false ] },
+		{ a: four, b: one, expect: [ 'c', 4 ] },
 
-		{ a: collectionB, b: collectionD, expect: [] },
-		{ a: collectionD, b: collectionB, expect: [
+		{ a: two, b: four, expect: [] },
+		{ a: four, b: two, expect: [
 			4,
 			3,
 			2,
 			1,
 		] },
 
-		{ a: collectionC, b: collectionD, expect: [ 0 ] },
-		{ a: collectionD, b: collectionC, expect: [
+		{ a: three, b: four, expect: [ 0 ] },
+		{ a: four, b: three, expect: [
 			'c',
 			'b',
 			'a',
