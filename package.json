@@ -19,10 +19,10 @@
   "author": "Rogier Spieker <rogier@konfirm.eu>",
   "license": "MIT",
   "devDependencies": {
-    "@konfirm/labrat": "^1.4.0",
+    "@konfirm/labrat": "^2.0.0",
     "eslint-config-strict": "^14.0.1"
   },
   "dependencies": {
-    "@konfirm/is-type": "^1.0.4"
+    "@konfirm/is-type": "^1.0.6"
   }
 }
