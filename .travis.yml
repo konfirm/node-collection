@@ -1,11 +1,24 @@
 language: node_js
 node_js:
-- '7'
-- '8'
-- '9'
-- '10'
-- '11'
-- '12'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    - '11'
+    - '12'
+jobs:
+    include:
+        - stage: npm release
+          if: tag IS present
+          node_js: 12
+          deploy:
+              provider: npm
+              email: rogier+npm@konfirm.eu
+              on:
+                  branch: master
+                  tags: true
+              api_key:
+                  secure: QKY+CUZKkL9J0h4VdtE12s2iV1zhtt5Xw8VmmUDL227muLlt+SRbn4zKhujGeIS3rs/+oTToidcaRV9zXQ0qx+CBqAAuCFwJRynG6wK2hx/oxp8KzNk3EeVPojb4cHvjzAEoqIlfAsr3w4gOA2ukpeXKvGXndN8HdP4xtn0m/X3FEjOqhth9zLPFCy7NalTklKVzf/2BEDOGqa49C9/o28+ioYCWHOKsifpxoFgv1mnslgMUbXMYT0rg2JJoLPpJpgBEp82rbg5UNOwzSAr7RnVI/ceRZXAoQ8sdnp6mMSQEL7PtRQfznYhGYrCS+Ks4587L6cJmHkCu5oQWo4tWmcRuemoFy8gjwUvWRvCHBFIImlRbDbWwjLd/Q9NJhEFH1VLe1u0iFq6WtwZDbGTAoU28Kvz3wic1KJSEPGFwhBtnSM6cOLujMLEILDq3wvm5vXOlAkIJ8gXdCN8Yn9sg9qNG4RC2tW1pVp3I8bm/hSHpZyyjQxsUqlGBBLnetTjmfr3x02U5ecWejr6FMywXJw6seeVr7vbjUGAFdmrzgI/6QPfaXEyJLy9vPRUZs0gxJMSq/AXMEnHon7NfdzCo+Ild1RL/XaHJn+NlNpovo2a8cMrWFvM3aeiegI19V8EqsgG9t1Pst2eYNpheuIpAT4Bd9G3L8G9+k7SMoxuG72M=
 notifications:
-  slack:
-    secure: lQ7L0opamvKCS8Ae/S2a60keyLn2rHKCJ/eOUhOmJec7cBPjuycp7kC19CvrrUVVYh70gU/auiCtLti26+qDpgDC5P9q+VUS73a4K0dqvok/C38z4g27en8jW1FYTWj82NKFhS4oO3JhqyZZ/V0+Bn6MJfPBxvj+jHP81ib9LI6i3D0rTpuQGvE0A4ENu3Wfik6gLnLRx79IDujWskF3kM1S/BLq8XjzqHUykYqXC/3G4phesyiTJxNWvcztYnwhPN0dVf6K2f1YdBDPBJU8IlXMx6+SUmMkHhapLiohpbmnSZsouMqh2V97DvxRJzu27pv+bBRK5e11HP9OOAmFFxbLxka+05f+U5n4BvSfXn/RqEa5q7ZgDj3fI3E6knMPu8+S+kEHk0/q4I9rof6lijOa7KGnFY8sNud0dBnfSdhDxyLg/7T5H/PsEuOJBY44n0Db7KeVVLZ5rQuLH3kCGDNByPV84Pl0XRy4a3IqEFIjECvxGrxJDTTddu/llC1xQSQdBsMqr4QWICVJKgn0gIB+2YcyWtb4Da/eoDt6QDrX0rn56QR2OBzlQgk12F7vxYZqrWZ+IIPdeT6pNq1ij/sfI2S1som26DrwYtF4ALxEdGfHemL0VNFyfZWLqAIbzmYjoDMn/onAsNa6A8aIG3fzJzLFmrWuLzS35a+qNfY=
+    slack:
+        secure: lQ7L0opamvKCS8Ae/S2a60keyLn2rHKCJ/eOUhOmJec7cBPjuycp7kC19CvrrUVVYh70gU/auiCtLti26+qDpgDC5P9q+VUS73a4K0dqvok/C38z4g27en8jW1FYTWj82NKFhS4oO3JhqyZZ/V0+Bn6MJfPBxvj+jHP81ib9LI6i3D0rTpuQGvE0A4ENu3Wfik6gLnLRx79IDujWskF3kM1S/BLq8XjzqHUykYqXC/3G4phesyiTJxNWvcztYnwhPN0dVf6K2f1YdBDPBJU8IlXMx6+SUmMkHhapLiohpbmnSZsouMqh2V97DvxRJzu27pv+bBRK5e11HP9OOAmFFxbLxka+05f+U5n4BvSfXn/RqEa5q7ZgDj3fI3E6knMPu8+S+kEHk0/q4I9rof6lijOa7KGnFY8sNud0dBnfSdhDxyLg/7T5H/PsEuOJBY44n0Db7KeVVLZ5rQuLH3kCGDNByPV84Pl0XRy4a3IqEFIjECvxGrxJDTTddu/llC1xQSQdBsMqr4QWICVJKgn0gIB+2YcyWtb4Da/eoDt6QDrX0rn56QR2OBzlQgk12F7vxYZqrWZ+IIPdeT6pNq1ij/sfI2S1som26DrwYtF4ALxEdGfHemL0VNFyfZWLqAIbzmYjoDMn/onAsNa6A8aIG3fzJzLFmrWuLzS35a+qNfY=
