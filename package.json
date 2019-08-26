@@ -4,8 +4,8 @@
   "description": "Base collections, find intersections and diffs. Allows for explicit allowed type definitions",
   "main": "source/collection.js",
   "scripts": {
-    "test": "lab -vclr",
-    "test-coverage-html": "lab -clr html -o report.html"
+    "test": "./node_modules/.bin/lab -vclr",
+    "test-coverage-html": "./node_modules/.bin/lab -clr html -o report.html"
   },
   "keywords": [],
   "homepage": "https://github.com/konfirm/node-collection",
@@ -19,10 +19,10 @@
   "author": "Rogier Spieker <rogier@konfirm.eu>",
   "license": "MIT",
   "devDependencies": {
-    "@konfirm/labrat": "^2.0.1",
+    "@konfirm/labrat": "^2.0.2",
     "eslint-config-strict": "^14.0.1"
   },
   "dependencies": {
-    "@konfirm/is-type": "^1.0.7"
+    "@konfirm/is-type": "^1.0.8"
   }
 }
